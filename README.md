@@ -41,3 +41,12 @@ terraform import aws_instance.web <instance-id>
 terraform state list
 terraform state show aws_instance.web
 terraform plan
+
+## Challenge and Troubleshooting
+
+After importing the EC2 instance, `terraform plan` showed differences
+between my Terraform configuration and the existing AWS resource.
+
+I reviewed the plan output, compared it with the EC2 configuration,
+updated the Terraform code, and ran `terraform plan` again until the
+configuration matched the existing environment.
